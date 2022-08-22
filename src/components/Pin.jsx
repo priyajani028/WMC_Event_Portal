@@ -8,8 +8,8 @@ function Pin({pinSize, imgSrc, name, link }) {
     <div className={`${pinSize} rounded-xl bg-[#444] m-[5px] cursor-pointer relative `}>
       {/* {console.log(pinSize)} */}
         <img src={imgSrc} alt="" className="mainPic w-full h-full object-cover" />
-        <div className="content w-full h-[25px] md:h-[50px] bg-[rgba(255, 255, 255, 0.2)] absolute -b-[55px] left-0 rounded-md backdrop-blur-sm flex items-center justify-between hover: bottom-0 duration-300 py-0 px-[15px] ">
-        <h3 className='hover:{text-[#feffff] text-xs md:text-sm font-medium}'>{name}</h3>
+        <div className="content w-full h-[25px] md:h-[50px] bg-[rgba(255, 255, 255, 0.2)] absolute -b-[55px] left-0 backdrop-blur-sm flex items-center justify-between hover: bottom-0 duration-300 py-0 px-[15px] bg-black/70 ">
+        <h3 className='text-white hover:{text-[#feffff] text-xs md:text-sm font-medium}'>{name}</h3>
         <div className="search bg-[#fb3874] p-1 md:p-2 rounded-full">
           <a href={link}>
             <img

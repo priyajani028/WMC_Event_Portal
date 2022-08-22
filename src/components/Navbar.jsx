@@ -1,4 +1,11 @@
 import React from "react";
+import logo from "../assets/logo.png";
+import user from "../assets/user.png"
+import home from "../assets/home.png"
+import bell from "../assets/bell.png"
+import calendar from "../assets/calendar.png"
+import settings from "../assets/settings.png"
+import control from "../assets/control.png"
 
 
 const Navbar = (props) => {
@@ -25,14 +32,14 @@ const Navbar = (props) => {
         {/* h-screen */}
         {/* src="./src/assets/control.png" */}
         <img alt=""
-          src="../assets/control.png"
+          src={control}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-greys
            border-1 rounded-full  ${!props.open && "rotate-180"}`}
           onClick={() => props.setOpen(!props.open)}
         />
         <div className="flex gap-x-4 items-center">
           <img alt=""
-            src="../assets/logo.png"
+            src={logo}
             className={`cursor-pointer duration-500 ${
               props.open && "rotate-[360deg]"
             }`}
@@ -54,7 +61,7 @@ const Navbar = (props) => {
                 index === 0 && "bg-light-white"
               } `}
             >
-              <img alt="" src={`../assets/${Menu.src}.png`} />
+              <img alt="" src={Menu.src==="home" ? home : Menu.src==="bell" ? bell : Menu.src==="calendar" ? calendar : settings} />
               <span className={`${!props.open && "hidden"} origin-left duration-200`}>
                 {Menu.title}
               </span>
@@ -63,7 +70,7 @@ const Navbar = (props) => {
         </ul>
         <div className="flex gap-x-4 items-center absolute bottom-3">
           <img alt=""
-            src="../assets/user.png"
+            src={user}
             className={`cursor-pointer duration-500 h-10 w-10 ${
               props.open && "rotate-[360deg]"
             }`}
