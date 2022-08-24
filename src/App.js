@@ -1,8 +1,14 @@
 import { useState } from "react";
+import Events from "./components/AddEvents";
 
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/Searchbar";
 import Gallery from "./components/Gallery";
+import { Route, Routes } from "react-router-dom";
+import Admin from "./components/Admin";
+import Login from "./components/Login";
+import Roles from "./components/Roles";
+
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -19,7 +25,14 @@ function App() {
             </div>
             <div className="h-5/6 relative bg-light-greys rounded-lg p-7">
               <div className="h-full relative overflow-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
-                <Gallery open={open} setOpen={setOpen}/>
+
+              <Routes>
+      <Route path="/" element={<Gallery open={open} setOpen={setOpen}/>} />
+      <Route path="/admin" element={<Admin />} />
+      
+      <Route path="/events" element={<Events />} />
+    </Routes>
+                
               </div>
             </div>
         </div>
