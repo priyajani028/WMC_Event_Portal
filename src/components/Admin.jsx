@@ -1,6 +1,7 @@
 import React from 'react'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import Data from './Data';
+import { Link } from 'react-router-dom';
 
 const x = new Date()
 const today = x.toLocaleDateString("en-US")
@@ -18,9 +19,11 @@ const future = Data.filter((x) => {
 const Admin = () => {
   return (
     <div className='flex flex-col space-y-10'>
-    <div className='w-[200px] h-[50px] bg-[#3DD598] rounded-lg text-lg font-bold flex justify-center items-center space-x-2 text-white'>
+      <Link to="/events">
+    <button className='w-[200px] h-[50px] bg-[#3DD598] rounded-lg text-lg font-bold flex justify-center items-center space-x-2 text-white'>
       <AddCircleOutlineIcon /> <p>New Event</p>
-    </div>
+    </button>
+    </Link>
     <div>
       <div className='font-bold text-white text-[20px] mb-4'>Ongoing Events</div>
       {ongoing.map((x) => (
