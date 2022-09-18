@@ -1,5 +1,5 @@
 import React from 'react';
-import Data from './Data';
+import Data from './Eventdata';
 import Pin from './Pin';
 
 function Gallery(props) {

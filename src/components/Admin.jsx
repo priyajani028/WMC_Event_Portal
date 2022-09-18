@@ -1,6 +1,6 @@
 import React from 'react'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import Data from './Data';
+import Data from './Eventdata';
 import { Link } from 'react-router-dom';
 
 const x = new Date()
@@ -27,7 +27,7 @@ const Admin = () => {
     <div>
       <div className='font-bold text-white text-[20px] mb-4'>Ongoing Events</div>
       {ongoing.map((x) => (
-        <div className='w-[800px] h-[50px] bg-gradient-to-r from-white/20 to-white/5 text-white font-bold text-[18px] rounded-xl border-2 border-white/20 flex mb-3 justify-start px-5 items-center'>
+        <div className='w-full h-[50px] bg-gradient-to-r from-white/20 to-white/5 text-white font-bold text-[18px] rounded-xl border-2 border-white/20 flex mb-3 justify-start px-5 items-center'>
           <p key={x.id}>{x.name}</p>
         </div>
         
@@ -36,7 +36,7 @@ const Admin = () => {
     <div>
       <div className='font-bold text-white text-[20px] mb-4'>Future Events</div>
       {future.map((x) => (
-        <div className='w-[800px] h-[50px] bg-gradient-to-r from-white/20 to-white/5 text-white font-bold text-[18px] rounded-xl border-2 border-white/20 flex mb-3 justify-start px-5 items-center'>
+        <div className='w-full h-[50px] bg-gradient-to-r from-white/20 to-white/5 text-white font-bold text-[18px] rounded-xl border-2 border-white/20 flex mb-3 justify-start px-5 items-center'>
           <p key={x.id}>{x.name}</p>
         </div>
         

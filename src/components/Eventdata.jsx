@@ -1,4 +1,12 @@
 const Data = [
+  {
+    id: 30,
+    imgSrc:
+      "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg",
+    name: "cat",
+    link: "https://pixabay.com/photos/cat-kitten-pet-kitty-young-cat-551554/",
+    size: "large",
+  },
     {
       id: 1,
       imgSrc:
@@ -331,14 +339,7 @@ const Data = [
       link: "https://pixabay.com/photos/heart-window-rain-drops-love-5190672/",
       size: "small",
     },
-    {
-      id: 30,
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg",
-      name: "cat",
-      link: "https://pixabay.com/photos/cat-kitten-pet-kitty-young-cat-551554/",
-      size: "large",
-    },
+    
   ];
   
   export default Data;
