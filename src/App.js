@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Events from "./components/AddEvents";
+import AddEvents from "./components/AddEvents";
 
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/Searchbar";
@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Admin from "./components/Admin";
 import Login from "./components/Login";
 import Roles from "./components/Roles";
+import Event from "./components/Event";
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
       <Route path="/" element={<Gallery open={open} setOpen={setOpen}/>} />
       <Route path="/admin" element={<Admin />} />
       
-      <Route path="/events" element={<Events />} />
+      <Route path="/addevents" element={<AddEvents />} />
+      <Route path="/event" element={<Event />} />
     </Routes>
                 
               </div>
